@@ -30,11 +30,7 @@ from chessclub.core.models import (
     Tournament,
     TournamentResult,
 )
-
-# TODO: SQLiteCache lives in providers/chesscom/cache.py; it should be
-# extracted to providers/cache.py as shared infrastructure once a second
-# provider (this one) needs it.
-from chessclub.providers.chesscom.cache import SQLiteCache
+from chessclub.providers.cache import SQLiteCache
 
 # ------------------------------------------------------------------
 # TTL constants (seconds)

@@ -1532,7 +1532,7 @@ def rating_history(
 @_timed
 def cache_stats() -> None:
     """Show cache statistics (entry count and database size)."""
-    from chessclub.providers.chesscom.cache import SQLiteCache
+    from chessclub.providers.cache import SQLiteCache
 
     cache = SQLiteCache()
     s = cache.stats()
@@ -1561,7 +1561,7 @@ def cache_clear(
     By default removes all entries.  Use --expired to remove only entries
     whose TTL has elapsed while keeping still-valid responses in place.
     """
-    from chessclub.providers.chesscom.cache import SQLiteCache
+    from chessclub.providers.cache import SQLiteCache
 
     cache = SQLiteCache()
     if expired_only:
