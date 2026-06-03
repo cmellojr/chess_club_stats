@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- **Cache infrastructure** — extracted `SQLiteCache` and `CachedResponse` from
+  `providers/chesscom/cache.py` to `providers/cache.py` as shared infrastructure
+  for all providers
+- **Branch cleanup** — deleted stale `feature/lichess-support` and `feature/oauth`
+  branches (both local and remote)
+
 ---
 
 ## [0.2.0] — 2026-03-12
