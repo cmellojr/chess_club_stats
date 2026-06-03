@@ -69,7 +69,7 @@ Both HTTP 200 and 404 responses follow the same TTL for their URL pattern.
 ## Implementation
 
 The cache is implemented in
-[`src/chessclub/providers/chesscom/cache.py`](../src/chessclub/providers/chesscom/cache.py)
+[`src/chessclub/providers/cache.py`](../src/chessclub/providers/cache.py)
 and consists of two classes:
 
 ### `SQLiteCache`
@@ -97,9 +97,9 @@ in the cached body. Implements `json()` and `raise_for_status()` (no-op).
 
 ---
 
-## Integration in `ChessComClient`
+## Integration in Platform Providers
 
-`ChessComClient` integrates the cache transparently via two internal methods:
+Platform providers (e.g. `ChessComClient`, `LichessClient`) integrate the cache transparently via two internal methods (or equivalents):
 
 ### `_cache_ttl(url) -> int | None`
 

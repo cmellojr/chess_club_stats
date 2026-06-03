@@ -18,7 +18,7 @@ from chessclub.core.models import (
     Tournament,
     TournamentResult,
 )
-from chessclub.providers.chesscom.cache import CachedResponse, SQLiteCache
+from chessclub.providers.cache import CachedResponse, SQLiteCache
 
 
 class ChessComClient(ChessProvider):
