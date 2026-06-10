@@ -87,6 +87,8 @@ To avoid duplication and ensure updates are kept in a single location, refer to 
 - [docs/usage.md](docs/usage.md)
   * **Contents:** Comprehensive installation guides, authentication setup workflows (OAuth 2.0 PKCE Loopback vs. Session Cookies), library integration examples for external Python applications, output formatting, and verbose execution flags.
 - [docs/features.md](docs/features.md)
+  * **Contents:** Auto-maintained feature map — every user-facing feature mapped to its code path (file:line references), updated alongside the code.
+- [docs/cli-commands.md](docs/cli-commands.md)
   * **Contents:** Complete CLI command blueprints, subcommands structures (`club`, `player`, `auth`, `cache`), output structures, and details on how background logic performs pagination, Swiss leaderboards fallbacks, and hyperlinked terminal outputs.
 - [docs/cache.md](docs/cache.md)
   * **Contents:** SQLite-based disk cache architecture located at `~/.cache/chessclub/cache.db`. Explains the table schemas, WAL journal modes, cache key serialization formats, and the distinct TTL policies mapped to API volatility.
