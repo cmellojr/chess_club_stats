@@ -48,7 +48,8 @@ class Member:
     rating: int | None
     title: str | None
     joined_at: int | None
-    """Unix timestamp of when the member joined the club, or ``None`` if unknown."""
+    """Unix timestamp of when the member joined the club, or ``None`` if
+    unknown."""
 
     activity: str | None = None
     """General platform activity tier (not club-specific): ``"weekly"``,
@@ -145,10 +146,10 @@ class Game:
     """Unix timestamp of when the game was played, or ``None`` if unknown."""
 
     white_accuracy: float | None = None
-    """Stockfish accuracy for the white player (0–100), or ``None`` if not reviewed."""
+    """Stockfish accuracy for white (0–100), or ``None`` if not reviewed."""
 
     black_accuracy: float | None = None
-    """Stockfish accuracy for the black player (0–100), or ``None`` if not reviewed."""
+    """Stockfish accuracy for black (0–100), or ``None`` if not reviewed."""
 
     tournament_id: str | None = None
     """Provider-specific ID of the tournament this game belongs to."""

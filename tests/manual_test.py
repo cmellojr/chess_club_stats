@@ -1,6 +1,6 @@
-from chessclub.providers.chesscom import ChessComProvider
+from chessclub.providers.chesscom.client import ChessComClient
 
-provider = ChessComProvider(
+provider = ChessComClient(
     user_agent="Chessclub/0.1 (contact: cmellojr@gmail.com)"
 )
 

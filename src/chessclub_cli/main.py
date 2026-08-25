@@ -302,7 +302,8 @@ def setup():
 
     creds_store.save(access_token, phpsessid)
     console.print(
-        f"[green]✓ Credentials saved to:[/green] {creds_store.credentials_path()}"
+        f"[green]✓ Credentials saved to:[/green] "
+        f"{creds_store.credentials_path()}"
     )
     console.print(
         "[dim]ACCESS_TOKEN expires in ~24h. "
@@ -1024,9 +1025,9 @@ def games(
         if not data:
             scope_hint = f"last {last_n}" if n else "all"
             console.print(
-                f"[yellow]Tip:[/yellow] No games were found in the {scope_hint} "
-                "tournament(s). The leaderboard endpoint may not be available "
-                "for those tournaments (returned 404 or 429)."
+                f"[yellow]Tip:[/yellow] No games were found in the "
+                f"{scope_hint} tournament(s). The leaderboard endpoint may not "
+                "be available for those tournaments (returned 404 or 429)."
             )
             console.print(
                 "[dim]• Try a larger --last-n value (e.g. --last-n 10)\n"
@@ -1532,7 +1533,7 @@ def rating_history(
 @_timed
 def cache_stats() -> None:
     """Show cache statistics (entry count and database size)."""
-    from chessclub.providers.chesscom.cache import SQLiteCache
+    from chessclub.providers.cache import SQLiteCache
 
     cache = SQLiteCache()
     s = cache.stats()
@@ -1561,7 +1562,7 @@ def cache_clear(
     By default removes all entries.  Use --expired to remove only entries
     whose TTL has elapsed while keeping still-valid responses in place.
     """
-    from chessclub.providers.chesscom.cache import SQLiteCache
+    from chessclub.providers.cache import SQLiteCache
 
     cache = SQLiteCache()
     if expired_only:
