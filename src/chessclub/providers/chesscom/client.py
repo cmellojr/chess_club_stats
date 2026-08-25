@@ -18,11 +18,11 @@ from chessclub.core.models import (
     Tournament,
     TournamentResult,
 )
-from chessclub.providers.chesscom.cache import CachedResponse, SQLiteCache
+from chessclub.providers.cache import CachedResponse, SQLiteCache
 
 
 class ChessComClient(ChessProvider):
-    """Provider for Chess.com that combines the public API and internal endpoints.
+    """Provider for Chess.com combining public API and internal endpoints.
 
     The public API (``api.chess.com/pub``) requires no authentication and is
     used for club metadata and member lists.  The internal web API
